@@ -231,6 +231,21 @@ section ul {
   padding: 20px;
   border-radius: 8px;
   text-align: center;
+  position: relative;
+  overflow: hidden; /* Ensure images are contained without overflow */
+}
+
+.class-item .class-image {
+  width: 100%;
+  height: 200px; /* Control image height */
+  overflow: hidden;
+}
+
+.class-item img {
+  width: 100%;
+  height: 100%; /* Ensure the image takes full container height */
+  object-fit: cover; /* Maintain aspect ratio and cover container */
+  display: block;
 }
 
 .class-item h2 {
@@ -289,3 +304,4 @@ section ul {
     gap: 10px;
   }
 }
+
