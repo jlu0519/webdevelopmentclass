@@ -1,117 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Home</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
-    <script type="module" src="script.js"></script>
-    <script src="path/to/cart-script.js"></script>
-  </head>
-  <body>
-    <!-- Main Heading -->
-    <h1>ABC Fitness Studio</h1>
 
-    <!-- Navigation Buttons -->
-    <nav class="navigation-buttons-desktop">
-      <div>
-        <button><a href="/" aria-current="page">Home</a></button>
-        <button><a href="/page2.html">Gallery</a></button>
-        <button><a href="/page3.html">About us</a></button>
-        <button><a href="/page4.html">Classes</a></button>
-        <button id="cartButton">Cart</button> <!-- Cart button triggers modal -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script type="module" src="script.js"></script>
+</head>
+
+<body>
+  <!-- Main Heading -->
+  <h1>ABC Fitness Studio</h1>
+  <img src="/images/logo.png" alt="logo">
+
+  <!-- Navigation Buttons -->
+  <nav class="navigation-buttons-desktop">
+    <div>
+      <button><a href="/" aria-current="page">Home</a></button>
+      <button><a href="/page2.html">Gallery</a></button>
+      <button><a href="/page3.html">About us</a></button>
+      <button><a href="/page4.html">Classes</a></button>
+      <button id="cartButton">Cart</button> <!-- Cart button triggers modal -->
+    </div>
+  </nav>
+
+  <!-- Modal (Cart Window) -->
+  <div id="cartModal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="closeCartModal">&times;</span> <!-- Close button for Cart modal -->
+      <h2>Your Cart</h2>
+
+      <!-- Cart items container -->
+      <div id="cartItems" class="cart-items">
+        <p>Cart is currently empty.</p> <!-- Default message when cart is empty -->
       </div>
-    </nav>
 
-    <!-- Modal (Cart Window) -->
-    <div id="cartModal" class="modal">
-      <div class="modal-content">
-        <span class="close">&times;</span> <!-- Close button -->
-        <h2>Your Cart</h2>
-        
-        <!-- Cart items container -->
-        <div id="cartItems" class="cart-items">
-          <p>Cart is currently empty.</p> <!-- Default message when cart is empty -->
-        </div>
+      <!-- Process Order Button (Initially hidden) -->
+      <button id="processOrderButton" style="display:none;">Process Order</button> <!-- Hidden if cart is empty -->
+    </div>
+  </div>
 
-        <!-- Process Order Button (Initially hidden) -->
-        <button id="processOrderButton" style="display:none;">Process Order</button> <!-- Hidden if cart is empty -->
+  <!-- Contact Us Modal -->
+  <div id="contactUsModal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="closeContactUsModal">&times;</span> <!-- Close button for Contact Us modal -->
+      <h2>Contact Us</h2>
+      <p>If you have any questions, feel free to reach out to us:</p>
+      <ul class="contactUsText">
+        <li><strong>Email:</strong> support@abcfitness.com</li>
+        <li><strong>Phone:</strong> 951-456-7890</li>
+        <li><strong>Address:</strong> 123 Fitness St, Healthy Town, Maryland, 123991</li>
+      </ul>
+      <p>Or, sign up for our newsletter for weekly updates by entering your email below:</p>
+      <form id="contactUsForm">
+        <label for="contactEmail">Email Address:</label>
+        <input type="email" id="contactEmail" name="email" required />
+        <button type="submit">Subscribe!</button>
+      </form>
+      <div id="contactConfirmation" style="display:none;">
+        <p>Thank you! Your Subscription is appreciated!</p>
       </div>
     </div>
+  </div>
 
-    <!-- Main Content Section -->
-    <main>
-      <!-- Client Highlights Section -->
-      <section>
-        <h2>Client Highlights</h2>
-        <p>Our clients love the supportive and welcoming environment we’ve cultivated here at ABC Fitness Studio. From beginners to seasoned athletes, our diverse range of classes and expert trainers are here to guide you every step of the way.</p>
-        <p><strong>What Our Members Are Saying:</strong></p>
-        <ul>
-          <li>"ABC Fitness Studio has truly transformed my fitness journey. The variety of classes keeps me motivated, and the community is incredibly supportive."- Harrison Ford</li>
-          <li>"I love the kickboxing classes! It's a fun way to get a full-body workout and relieve stress. Highly recommend it!"- John Adams</li>
-          <li>"The Pilates sessions helped me build strength and flexibility in ways I never thought possible. Can't wait to take my next class!"- Janice Smith</li>
-        </ul>
-        <p>Join us today and see why our members rave about the positive impact our studio has on their fitness and overall well-being.</p>
-      </section>
+  <!-- Main Content Section -->
+  <main>
+    <!-- Client Highlights Section -->
+    <section>
+      <h2>Client Highlights</h2>
+      <p>Our clients love the supportive and welcoming environment we’ve cultivated here at ABC Fitness Studio. From beginners to seasoned athletes, our diverse range of classes and expert trainers are here to guide you every step of the way.</p>
+      <p><strong>What Our Members Are Saying:</strong></p>
+      <ul>
+        <li>"ABC Fitness Studio has truly transformed my fitness journey. The variety of classes keeps me motivated, and the community is incredibly supportive."- Harrison Ford</li>
+        <li>"I love the kickboxing classes! It's a fun way to get a full-body workout and relieve stress. Highly recommend it!"- John Adams</li>
+        <li>"The Pilates sessions helped me build strength and flexibility in ways I never thought possible. Can't wait to take my next class!"- Janice Smith</li>
+      </ul>
+      <p>Join us today and see why our members rave about the positive impact our studio has on their fitness and overall well-being.</p>
+    </section>
 
-      <!-- Shopping Promos Section -->
-      <section>
-        <h2>Shopping Promotions</h2>
-        <p>Take advantage of our special promotions to kickstart your fitness journey! Whether you're signing up for a membership or purchasing gear for your next workout, we have deals to help you save while you achieve your goals.</p>
-        <ul>
-          <li><strong>Sign-Up Special:</strong> Get 10% off your first month when you sign up for a membership.</li>
-          <li><strong>Referral Bonus:</strong> Refer a friend and earn a free class or merchandise credit!</li>
-          <li><strong>Equipment Sale:</strong> Save up to 20% on select fitness equipment, from yoga mats to dumbbells.</li>
-          <li><strong>Monthly Specials:</strong> Check back often for limited-time offers on class bundles and exclusive events.</li>
-        </ul>
-        <p>Don’t miss out—start your fitness journey today with amazing savings!</p>
-      </section>
+    <!-- Shopping Promos Section -->
+    <section>
+      <h2>Shopping Promotions</h2>
+      <p>Take advantage of our special promotions to kickstart your fitness journey! Whether you're signing up for a membership or purchasing gear for your next workout, we have deals to help you save while you achieve your goals.</p>
+      <ul>
+        <li><strong>Sign-Up Special:</strong> Get 10% off your first month when you sign up for a membership.</li>
+        <li><strong>Referral Bonus:</strong> Refer a friend and earn a free class or merchandise credit!</li>
+        <li><strong>Equipment Sale:</strong> Save up to 20% on select fitness equipment, from yoga mats to dumbbells.</li>
+        <li><strong>Monthly Specials:</strong> Check back often for limited-time offers on class bundles and exclusive events.</li>
+      </ul>
+      <p>Don’t miss out—start your fitness journey today with amazing savings!</p>
+    </section>
 
-      <!-- Product/Item Images Section -->
-      <section>
-        <h2>Fitness Equipment & Gear</h2>
-        <p>Explore our curated selection of fitness gear and equipment, all designed to help you perform your best, whether you’re working out at the studio or at home.</p>
-        <ul>
-          <li><strong>Yoga & Pilates Gear:</strong> High-quality mats, straps, and blocks to enhance your flexibility and mobility.</li>
-          <li><strong>Strength Training Equipment:</strong> Dumbbells, kettlebells, and resistance bands to help you build muscle and improve endurance.</li>
-          <li><strong>Apparel:</strong> Comfortable and stylish fitness apparel perfect for all activities, from yoga to high-intensity workouts.</li>
-          <li><strong>Studio Gear:</strong> Our handpicked equipment for classes, including mats, balls, and foam rollers, to support your fitness goals.</li>
-        </ul>
-        <p>Take a closer look at our most popular items below and get equipped for your next class!</p>
-        <!-- Add image gallery here -->
-      </section>
-
-      <!-- Shopping Perks Section -->
-      <section>
-        <h2>Shopping Perks</h2>
-        <p>We’re not just about great classes—we’re about making every aspect of your fitness experience exceptional. Here’s what you can expect when you shop and train with us:</p>
-        <ul>
-          <li><strong>Flexible Membership Options:</strong> Choose from a variety of membership plans that suit your schedule and goals.</li>
-          <li><strong>Expert Trainers:</strong> Our certified trainers provide personalized attention to help you achieve optimal results.</li>
-          <li><strong>Exclusive Member Discounts:</strong> Enjoy exclusive discounts on fitness gear, apparel, and special events when you join our membership program.</li>
-          <li><strong>Community Support:</strong> At ABC Fitness Studio, you’re not just a member you’re part of a community that supports your journey every step of the way.</li>
-        </ul>
-      </section>
-
-      <!-- Categories of Classes Section -->
-      <section>
-        <h2>Our Classes</h2>
-        <p>No matter your fitness goals, we offer a variety of classes that will help you get there. From flexibility-focused sessions to high-intensity workouts, our classes are designed to challenge you, improve your fitness, and promote overall well-being.</p>
-        <ul>
-          <li><strong>Yoga:</strong> Improve flexibility, reduce stress, and achieve mental clarity with our Yoga classes. Suitable for all levels.</li>
-          <li><strong>Pilates:</strong> Strengthen your core, improve posture, and enhance flexibility with Pilates. A perfect addition to any fitness routine.</li>
-          <li><strong>Kickboxing:</strong> Unleash your energy with our high-intensity Kickboxing classes. Burn calories and relieve stress while having fun.</li>
-          <li><strong>Strength Training:</strong> Build muscle, increase endurance, and boost metabolism with our strength classes, designed for all fitness levels.</li>
-        </ul>
-      </section>
-    </main>
-
-    <!-- Sign-up Button -->
+    <!-- Sign-up and Contact Us Buttons -->
     <nav class="navigation-buttons-desktop">
       <div class="signUpButton">
-        <button id="signUpButton">Sign up today!</button>
+        <button id="signUpButton">Sign up today!</button> <!-- Now adds a gym membership to the cart -->
+      </div>
+      <div class="signUpButton">
+        <button id="contactUsButton">Contact Us!</button>
       </div>
     </nav>
+  </main>
 
-  </body>
+</body>
+
 </html>
