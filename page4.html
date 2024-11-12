@@ -1,109 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Classes</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
-    <script src="script.js" defer></script>
-    <script src="path/to/cart-script.js"></script>
-  </head>
-  <body>
-    <!-- Main Heading -->
-    <h1>Classes</h1>
+<head>
+  <title>Classes</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+  <script type="module" src="script.js"></script>
+</head>
+<body>
+  <!-- Main Heading -->
+  <h1>Classes</h1>
 
-    <!-- Navigation Buttons -->
-    <nav class="navigation-buttons-desktop">
-      <div>
-        <button onclick="location.href='/'">Home</button>
-        <button onclick="location.href='/page2.html'">Gallery</button>
-        <button onclick="location.href='/page3.html'">About us</button>
-        <button onclick="location.href='/page4.html'">Classes</button>
-        <button id="cartButton">Cart</button> <!-- Cart button triggers modal -->
+  <!-- Navigation Buttons -->
+  <nav class="navigation-buttons-desktop">
+    <div>
+      <button onclick="location.href='/'">Home</button>
+      <button onclick="location.href='/page2.html'">Gallery</button>
+      <button onclick="location.href='/page3.html'">About us</button>
+      <button onclick="location.href='/page4.html'">Classes</button>
+      <button id="cartButton">Cart</button> <!-- Cart button triggers modal -->
+    </div>
+  </nav>
+
+  <!-- Modal (Cart Window) -->
+  <div id="cartModal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="closeCartModal">&times;</span>
+      <h2>Your Cart</h2>
+      
+      <!-- Cart items container -->
+      <div id="cartItems" class="cart-items">
+        <p>Cart is currently empty.</p> <!-- Default message when cart is empty -->
       </div>
-    </nav>
 
-<!-- Modal (Cart Window) -->
-<div id="cartModal" class="modal">
-<div class="modal-content">
-  <span class="close">&times;</span> <!-- Close button -->
-  <h2>Your Cart</h2>
-  
-  <!-- Cart items container -->
-  <div id="cartItems" class="cart-items">
-    <p>Cart is currently empty.</p> <!-- Default message when cart is empty -->
+      <!-- Process Order Button (Initially hidden) -->
+      <button id="processOrderButton" style="display:none;">Process Order</button>
+    </div>
   </div>
 
-  <!-- Process Order Button (Initially hidden) -->
-  <button id="processOrderButton" style="display:none;">Process Order</button> <!-- Hidden if cart is empty -->
-</div>
-</div>
-
-    <!-- Main Content Section -->
-    <main>
-      <div class="class-list">
-        
-        <!-- Individual Yoga Session -->
-        <div class="class-item">
-          <div class="class-image"> <!-- Placeholder for Image -->
-            <img src="/images/image6.png" alt="Individual Yoga Session" />
-          </div>
-          <h2>Individual Yoga Session</h2>
-          <p>Experience personalized yoga sessions tailored to your level.</p>
-          <button onclick="addToCart('Individual Yoga Session')">Add to Cart</button>
+  <!-- Main Content Section -->
+  <main>
+    <div class="class-list">
+      
+      <!-- Individual Yoga Session -->
+      <div class="class-item">
+        <div class="class-image">
+          <img src="/images/image6.png" alt="Individual Yoga Session" />
         </div>
-        
-        <!-- Group Yoga Session -->
-        <div class="class-item">
-          <div class="class-image"> <!-- Placeholder for Image -->
-            <img src="/images/image2.png" alt="Group Yoga Session" />
-          </div>
-          <h2>Group Yoga Session</h2>
-          <p>Join a group of like-minded individuals in a yoga class.</p>
-          <button onclick="addToCart('Group Yoga Session')">Add to Cart</button>
-        </div>
-        
-        <!-- Individual Pilates Session -->
-        <div class="class-item">
-          <div class="class-image"> <!-- Placeholder for Image -->
-            <img src="/images/image5.png" alt="Individual Pilates Session" />
-          </div>
-          <h2>Individual Pilates Session</h2>
-          <p>Get one-on-one Pilates training for a tailored workout.</p>
-          <button onclick="addToCart('Individual Pilates Session')">Add to Cart</button>
-        </div>
-        
-        <!-- Group Pilates Session -->
-        <div class="class-item">
-          <div class="class-image"> <!-- Placeholder for Image -->
-            <img src="/images/image3.png" alt="Group Pilates Session" />
-          </div>
-          <h2>Group Pilates Session</h2>
-          <p>Participate in a group Pilates session for a dynamic experience.</p>
-          <button onclick="addToCart('Group Pilates Session')">Add to Cart</button>
-        </div>
-        
-        <!-- Individual Kickboxing Session -->
-        <div class="class-item">
-          <div class="class-image"> <!-- Placeholder for Image -->
-            <img src="/images/image4.png" alt="Individual Kickboxing Session" />
-          </div>
-          <h2>Individual Kickboxing Session</h2>
-          <p>Engage in kickboxing with a trainer for personalized instruction.</p>
-          <button onclick="addToCart('Individual Kickboxing Session')">Add to Cart</button>
-        </div>
-        
-        <!-- Group Kickboxing Session -->
-        <div class="class-item">
-          <div class="class-image"> <!-- Placeholder for Image -->
-            <img src="/images/image1.png" alt="Group Kickboxing Session" />
-          </div>
-          <h2>Group Kickboxing Session</h2>
-          <p>Join others in an energetic group kickboxing class.</p>
-          <button onclick="addToCart('Group Kickboxing Session')">Add to Cart</button>
-        </div>
-
+        <h2>Individual Yoga Session</h2>
+        <p>Experience personalized yoga sessions tailored to your level.</p>
+        <button id="yogaSessionButton">Add to Cart</button>
       </div>
-    </main>
-  </body>
+      
+      <!-- Group Yoga Session -->
+      <div class="class-item">
+        <div class="class-image">
+          <img src="/images/image2.png" alt="Group Yoga Session" />
+        </div>
+        <h2>Group Yoga Session</h2>
+        <p>Join a group of like-minded individuals in a yoga class.</p>
+        <button id="groupYogaSession">Add to Cart</button>
+      </div>
+      
+      <!-- Individual Pilates Session -->
+      <div class="class-item">
+        <div class="class-image">
+          <img src="/images/image5.png" alt="Individual Pilates Session" />
+        </div>
+        <h2>Individual Pilates Session</h2>
+        <p>Get one-on-one Pilates training for a tailored workout.</p>
+        <button id="individualPilatesSession">Add to Cart</button>
+      </div>
+      
+      <!-- Group Pilates Session -->
+      <div class="class-item">
+        <div class="class-image">
+          <img src="/images/image3.png" alt="Group Pilates Session" />
+        </div>
+        <h2>Group Pilates Session</h2>
+        <p>Participate in a group Pilates session for a dynamic experience.</p>
+        <button id="groupPilatesSession">Add to Cart</button>
+      </div>
+      
+      <!-- Individual Kickboxing Session -->
+      <div class="class-item">
+        <div class="class-image">
+          <img src="/images/image4.png" alt="Individual Kickboxing Session" />
+        </div>
+        <h2>Individual Kickboxing Session</h2>
+        <p>Engage in kickboxing with a trainer for personalized instruction.</p>
+        <button id="individualKickboxingSession">Add to Cart</button>
+      </div>
+      
+      <!-- Group Kickboxing Session -->
+      <div class="class-item">
+        <div class="class-image">
+          <img src="/images/image1.png" alt="Group Kickboxing Session" />
+        </div>
+        <h2>Group Kickboxing Session</h2>
+        <p>Join others in an energetic group kickboxing class.</p>
+        <button id="groupKickboxingSession">Add to Cart</button>
+      </div>
+
+    </div>
+  </main>
+</body>
 </html>
+
