@@ -25,6 +25,7 @@ h1, h2, p {
   margin-right: auto; /* Centers the content horizontally */
 }
 
+/* h1 - Main Title */
 h1 {
   text-align: center;
   color: #c5c3c3;
@@ -34,6 +35,7 @@ h1 {
   text-transform: uppercase;
 }
 
+/* h2 - Subtitles */
 h2 {
   text-align: center;
   font-family: 'Times New Roman', serif;
@@ -42,6 +44,7 @@ h2 {
   color: #c5c3c3;
 }
 
+/* p - Paragraphs */
 p {
   font-family: 'Calibri', sans-serif;
   font-size: 18px;
@@ -65,13 +68,14 @@ button, .delete-item, .navigation-buttons-desktop button, #contactUsForm button 
   transition: background-color 0.3s, color 0.3s;
 }
 
+/* Button Hover Effect */
 button:hover, button:focus, .navigation-buttons-desktop button:hover, #contactUsForm button:hover {
   background-color: #c5c3c3;
   color: #001f3f;
   outline: none;
 }
 
-/* Delete Button Specific Styles */
+/* Delete Button */
 .delete-item {
   background-color: #dc3545;
   border: none;
@@ -139,22 +143,22 @@ section ul {
 /* Modal (Cart Window) */
 .modal {
   display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  position: fixed;
+  z-index: 1;
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
+  width: 100%;
+  height: 100%;
+  overflow: auto;
   background-color: rgba(0, 0, 0, 0.4); /* Black with opacity */
   justify-content: center;
   align-items: center;
 }
 
 .modal-content {
-  background-color: #001f3f; /* Blue background for modals */
-  color: #c5c3c3; /* Light text color */
-  border: 2px solid #c5c3c3; /* White border */
+  background-color: #001f3f;
+  color: #c5c3c3;
+  border: 2px solid #c5c3c3;
   padding: 20px;
   border-radius: 10px;
   width: 80%;
@@ -162,6 +166,7 @@ section ul {
   text-align: center;
 }
 
+/* Modal Close Button */
 .close {
   color: #c5c3c3;
   font-size: 28px;
@@ -172,7 +177,6 @@ section ul {
 .close:hover, .close:focus {
   color: #fff;
   text-decoration: none;
-  cursor: pointer;
 }
 
 /* Cart Modal Styling */
@@ -189,7 +193,7 @@ section ul {
   margin-top: 20px;
 }
 
-/* Class List */
+/* Class List Styling */
 .class-list {
   display: grid;
   gap: 20px;
@@ -209,15 +213,14 @@ section ul {
 
 .class-item .class-image {
   width: 100%;
-  height: 200px; /* Control image height */
+  height: 200px;
   overflow: hidden;
 }
 
 .class-item img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Maintain aspect ratio and cover container */
-  display: block;
+  object-fit: cover;
 }
 
 .class-item h2 {
@@ -317,3 +320,4 @@ img {
     gap: 10px;
   }
 }
+
