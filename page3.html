@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
     <script type="module" src="script.js"></script>
-    <script src="path/to/cart-script.js"></script>
   </head>
   <body>
     <!-- Main Heading -->
@@ -23,20 +22,20 @@
       </div>
     </nav>
 
-<!-- Modal (Cart Window) -->
-<div id="cartModal" class="modal">
-<div class="modal-content">
-  <span class="close">&times;</span> <!-- Close button -->
-  <h2>Your Cart</h2>
-  
-  <!-- Cart items container -->
-  <div id="cartItems" class="cart-items">
-    <p>Cart is currently empty.</p> <!-- Default message when cart is empty -->
-  </div>
+    <!-- Modal (Cart Window) -->
+    <div id="cartModal" class="modal">
+    <div class="modal-content">
+        <span class="close" id="closeCartModal">&times;</span> <!-- Close button for Cart modal -->
+        <h2>Your Cart</h2>
+        
+        <!-- Cart items container -->
+        <div id="cartItems" class="cart-items">
+            <p>Cart is currently empty.</p> <!-- Default message when cart is empty -->
+        </div>
 
-  <!-- Process Order Button (Initially hidden) -->
-  <button id="processOrderButton" style="display:none;">Process Order</button> <!-- Hidden if cart is empty -->
-</div>
+        <!-- Process Order Button (Initially hidden) -->
+        <button id="processOrderButton" style="display:none;">Process Order</button> <!-- Hidden if cart is empty -->
+    </div>
 </div>
 
     <!-- Main Content Section -->
@@ -73,3 +72,4 @@
 
   </body>
 </html>
+
